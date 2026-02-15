@@ -2,7 +2,6 @@
 
 An immersive, high-end interior design digital experience. This platform allows users to explore curated design languages and visualize their personal sanctuaries through an interactive mood-boarding journey.
 
-[View the Live Experience](INSERT_YOUR_GITHUB_PAGES_LINK_HERE)
 
 ---
 
