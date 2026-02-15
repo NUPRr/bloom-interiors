@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Discovery | Bloom Interiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="explore-bg">
+
+    <header class="top-header">
+        <h1 class="logo">Bloom Interiors</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Find Your Style</a>
+            <a href="results.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="quiz-container">
+        <div class="explore-info">
+            <p class="subtitle">TAILORED FOR YOU</p>
+            <h2>Find Your Perfect Aesthetic</h2>
+            <p>Answer these three questions to unlock a curated design mood board.</p>
+        </div>
+            
+        <div class="quiz-card">
+            <div class="input-group">
+                <label>Preferred Design Language</label>
+                <select id="style">
+                    <option value="minimal">Minimalist & Organic</option>
+                    <option value="boho">Boho & Eclectic</option>
+                    <option value="modern">Sleek & Modern</option>
+                    <option value="cozy">Warm & Cozy</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label>Project Investment (Budget)</label>
+                <select id="budget">
+                    <option value="low">Under ₹5 Lakhs</option>
+                    <option value="mid">₹5–10 Lakhs</option>
+                    <option value="high">Bespoke (Above ₹10 Lakhs)</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label>Space to Transform</label>
+                <select id="space">
+                    <option value="living">The Living Room</option>
+                    <option value="bedroom">The Sanctuary (Bedroom)</option>
+                    <option value="kitchen">The Heart (Kitchen)</option>
+                    <option value="workspace">The Studio (Workspace)</option>
+                </select>
+            </div>
+            
+            <button class="cta-btn dark" onclick="goToDesignPage()">Generate Mood Board</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

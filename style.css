@@ -1,0 +1,426 @@
+/* --- 1. GLOBAL RESET & FOUNDATION --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary: #1a1a1a;
+    --accent: #b08968; /* Luxury Taupe */
+    --bg: #faf9f6;
+    --white: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.4);
+    --glass: rgba(255, 255, 255, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+/* --- 2. PREMIUM NAVIGATION --- */
+.top-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-size: 36px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* --- 3. HERO & SECTIONS --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(var(--overlay), var(--overlay)), url('images/bg.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h2 {
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    letter-spacing: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.hero-desc {
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* --- 4. BUTTONS & UI --- */
+.cta-btn {
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 16px 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.cta-btn:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.cta-btn.dark {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.cta-btn.dark:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* --- 5. GRID & PORTFOLIO --- */
+.section {
+    padding: 120px 8%;
+}
+
+.philosophy {
+    text-align: center;
+    background: #fff;
+}
+
+.philosophy h3 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.philosophy p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: grayscale(20%);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.card-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: #fff;
+    z-index: 2;
+}
+
+.card-text h4 { font-size: 24px; }
+.card-text span { font-size: 12px; letter-spacing: 2px; opacity: 0.8; }
+
+.img-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    z-index: 1;
+}
+
+/* --- 6. EXPLORE PAGE (QUIZ) --- */
+.quiz-container {
+    padding: 180px 10% 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.explore-info { flex: 1; }
+.explore-info h2 { font-size: 56px; margin-bottom: 20px; }
+
+.quiz-card {
+    flex: 1;
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-family: 'Montserrat';
+    appearance: none;
+    background: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E') no-repeat right 15px center;
+    background-size: 12px;
+}
+
+/* --- 7. RESULTS & CONTACT --- */
+.results-header {
+    padding-top: 180px;
+    text-align: center;
+}
+
+.results-header h3 { font-size: 48px; margin-bottom: 10px; }
+
+.booking-section {
+    background: #1a1a1a;
+    color: #fff;
+    text-align: center;
+}
+
+.booking-box { max-width: 600px; margin: 0 auto; }
+.booking-box h3 { font-size: 36px; margin-bottom: 20px; }
+
+.consult-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.consult-form input {
+    padding: 15px;
+    border: none;
+    font-family: 'Montserrat';
+}
+
+.contact-container {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.contact-item {
+    margin: 40px 0;
+}
+
+.contact-item label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.contact-item p {
+    font-family: 'Cormorant Garamond';
+    font-size: 32px;
+}
+
+footer {
+    padding: 60px;
+    text-align: center;
+    background: #fff;
+    border-top: 1px solid #eee;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- 8. FIX FOR DESIGN.HTML NAVBAR --- */
+.navbar {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar h1 { font-size: 28px; letter-spacing: 4px; }
+.navbar ul { display: flex; list-style: none; gap: 30px; }
+.navbar a { text-decoration: none; color: #000; font-size: 11px; text-transform: uppercase; letter-spacing: 2px;}
+
+/* --- LUXURY REFINEMENT --- */
+body {
+    background-color: #f8f5f2 !important; /* Luxury Ivory Background */
+}
+
+/* Fix for Design Grid */
+.section .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.luxury-card {
+    height: 480px;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid rgba(176, 137, 104, 0.2);
+    transition: 0.4s ease;
+}
+
+.luxury-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(176, 137, 104, 0.15);
+}
+
+.luxury-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Isse image stretch nahi hogi aur card pura bharega */
+    display: block;
+}
+
+/* Fix for Navigation bullets in design page */
+.top-header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+#designTitle {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Cormorant Garamond', serif;
+    color: #1a1a1a;
+}
+
+/* --- MOBILE & TABLET OPTIMIZATION --- */
+@media (max-width: 768px) {
+    /* 1. Header & Logo chota karne ke liye */
+    .logo {
+        font-size: 28px !important;
+        letter-spacing: 5px !important;
+    }
+
+    .nav-links {
+        gap: 15px !important;
+    }
+
+    .nav-links a {
+        font-size: 8px !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* 2. Hero Section (Index Page) ka text center aur chota */
+    .hero-content h2 {
+        font-size: 32px !important;
+    }
+
+    /* 3. Sabse Important: Mood Board Grid Fix */
+    /* Phone par 1 ya 2 image hi dikhni chahiye side-by-side */
+    #designGrid {
+        grid-template-columns: 1fr !important; /* Ek ke niche ek */
+        padding: 20px !important;
+    }
+
+    .luxury-card {
+        height: 300px !important; /* Phone screen ke liye height fix */
+        width: 100% !important;
+    }
+
+    /* 4. Booking Form (Results Page) Fix */
+    .booking-section {
+        padding: 40px 5% !important;
+    }
+
+    .consult-form {
+        flex-direction: column !important; /* Date aur Time ek ke niche ek */
+        width: 100%;
+    }
+
+    .consult-form input, .consult-form button {
+        width: 100% !important;
+    }
+
+    /* 5. Philosophy Text */
+    .philosophy h3 {
+        font-size: 30px !important;
+    }
+    
+    .philosophy p {
+        font-size: 16px !important;
+        padding: 0 10px;
+    }
+}

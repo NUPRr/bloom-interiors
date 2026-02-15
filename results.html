@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Curation | Bloom Interiors</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <h1 class="logo">Bloom Interiors</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="explore.html">Find Your Style</a>
+            <a href="results.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="section results-header">
+        <h3 id="designTitle">Your Personalized Mood Board</h3>
+        <p>Based on your preferences, we’ve selected these elements to inspire your next project.</p>
+    </section>
+
+    <section class="section">
+        <div class="card-grid" id="designGrid">
+            </div>
+    </section>
+
+    <section class="section booking-section" style="padding: 40px 10%; background: #1a1a1a; color: white;">
+    <div class="booking-box" style="max-width: 500px; margin: 0 auto;">
+        <h3 style="font-size: 32px; margin-bottom: 10px;">Confirm Your Session</h3>
+        <p style="margin-bottom: 25px; opacity: 0.8;">Choose a time to discuss your curation with our lead designer.</p>
+        
+        <form class="consult-form" id="finalBookingForm" style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="display: flex; gap: 10px;">
+                <input type="date" id="resDate" required style="flex: 1; padding: 12px;">
+                <input type="time" id="resTime" required style="flex: 1; padding: 12px;">
+            </div>
+            <button type="submit" class="cta-btn" style="background: #b08968; color: white; border: none; padding: 15px; cursor: pointer; width: 100%;">Confirm Appointment</button>
+        </form>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+
+    <div class="popup-overlay" id="successPopup">
+    <div class="popup-content">
+        <i class="fas fa-check-circle"></i>
+        <h4>Consultation Requested</h4>
+        <p>Thank you for choosing Bloom Interiors. Our lead designer will contact you within 24 hours to confirm your sanctuary's transformation.</p>
+        <button class="cta-btn dark" style="margin-top: 30px;" onclick="closePopup()">Return Home</button>
+    </div>
+</div>
+</body>
+</html>
