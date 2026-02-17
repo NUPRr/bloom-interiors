@@ -423,4 +423,43 @@ body {
         font-size: 16px !important;
         padding: 0 10px;
     }
+
+}
+/* --- MOBILE REFINEMENT --- */
+@media (max-width: 600px) {
+    /* 1. Header ko stack karein taaki logo aur links mix na ho */
+    .top-header {
+        position: relative !important; /* Mobile par fixed header space gher leta hai */
+        padding: 15px !important;
+        text-align: center;
+    }
+    
+    .nav-links {
+        justify-content: center;
+        gap: 10px !important;
+        margin-top: 10px;
+    }
+
+    /* 2. Grid Fix: Images ek ke niche ek aayengi */
+    #designGrid, .card-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .card, .luxury-card {
+        width: 100% !important; /* Full width on mobile */
+        max-width: 340px; 
+        height: 300px !important;
+    }
+
+    /* 3. Text Sizing */
+    .hero-content h2 { font-size: 28px !important; }
+    .philosophy p { padding: 0 15px; font-size: 15px !important; }
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Isse photo khichegi nahi, cut kar adjust ho jayegi */
 }
